@@ -1,0 +1,7 @@
+Primary button color => color #ffffff
+                        background #254222
+Hover => background #99cc66
+
+Secondary button color => color #000
+                        background transparent
+                        

@@ -1,0 +1,7 @@
+Heading Level	Font Size (px)	Font Size (rem/em)
+H1	32–48px	2–3rem
+H2	24–32px	1.5–2rem
+H3	20–24px	1.25–1.5rem
+H4	18–20px	1.125–1.25rem
+H5	16–18px	1–1.125rem
+H6	14–16px	0.875–1rem

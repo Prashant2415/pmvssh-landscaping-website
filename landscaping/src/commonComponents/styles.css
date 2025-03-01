@@ -14,3 +14,12 @@
     color: #77B254;
     border: 1px solid #77B254;
 }
+
+/* LS Link */
+.link{
+    text-decoration: none;
+    color: #000000;
+}
+.link:hover{
+    color: #77B254;
+}

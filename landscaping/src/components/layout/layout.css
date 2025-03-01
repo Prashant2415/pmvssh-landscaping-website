@@ -1,6 +1,6 @@
 /*Main container*/
 .main-container{
-    height: 78dvh;
+    height: auto;
 }
 
 /* Header */
@@ -33,16 +33,7 @@
 .li-links{
     display: block;
 }
-.link{
-    text-decoration: none;
-    color: #000000;
-}
-.link:hover{
-    color: #77B254;
-}
-.link:active{
-    background-color: red;
-}
+
 .cart-login{
     display: flex;
     flex-wrap: nowrap;

@@ -1,0 +1,70 @@
+/*Main container*/
+.main-container{
+    height: 78dvh;
+}
+
+/* Header */
+.header-container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+
+}
+.logo-t{
+    color: #77B254;
+}
+.nav-container{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.ul-container{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.li-links{
+    display: block;
+}
+.link{
+    text-decoration: none;
+    color: #000000;
+}
+.link:hover{
+    color: #77B254;
+}
+.link:active{
+    background-color: red;
+}
+.cart-login{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+.cart{
+    cursor: pointer;
+}
+.login-button{
+    cursor: pointer;
+    background: #77B254;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+.login-button:hover{
+    background: #ffffff;
+    color: #77B254;
+    border: 1px solid #77B254;
+}

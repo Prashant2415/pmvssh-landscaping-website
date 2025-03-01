@@ -1,0 +1,16 @@
+/* Primary Button */
+.primary-button{
+    cursor: pointer;
+    background: #77B254;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+.primary-button:hover{
+    background: #ffffff;
+    color: #77B254;
+    border: 1px solid #77B254;
+}

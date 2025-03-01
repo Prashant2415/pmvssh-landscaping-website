@@ -19,6 +19,8 @@
 .link{
     text-decoration: none;
     color: #000000;
+    font-size: 18px;
+    font-weight: 600;
 }
 .link:hover{
     color: #77B254;

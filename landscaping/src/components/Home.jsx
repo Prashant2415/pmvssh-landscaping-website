@@ -7,11 +7,17 @@ import { PrimaryButton, SecondaryButton } from '../commonComponents/ButtonCompon
 import { LSHeading } from '../commonComponents/Common'
 import { Data } from './Data'
 import {Card} from '../commonComponents/Card'
+import { useDispatch, useSelector } from 'react-redux'
+import { addtocart } from '../redux/addtocardSlice'
 const Home = () => {
+  const dispatch = useDispatch();
   const data = Data;
   const handleOnCardClick =(data)=>{
-    console.log("Added", data)
+    //console.log("Added", data)
+    dispatch(addtocart(data));
   }
+  const selector = useSelector((state)=> state.addtocartSlice);
+  console.log("selector ",selector)
   return (
     <div>
       <div className='home-container'>

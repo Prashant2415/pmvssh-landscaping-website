@@ -59,3 +59,30 @@
     color: #77B254;
     border: 1px solid #77B254;
 }
+
+/* Footer */
+.footer-container{
+    padding: 0rem 0rem 1rem 0rem;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-content{
+    width: 28rem;
+}
+.footer-ul{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5rem;
+}
+.footer-li{
+    display: block;
+}
+.underline{
+    text-decoration: underline !important;
+    text-decoration-color: #77B254 !important;
+}
+.copyright{
+    color: #77B254;
+}

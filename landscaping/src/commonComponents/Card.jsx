@@ -11,6 +11,7 @@ const CardComponent = styled.div`
     align-items: center;
     position: relative;
     border-radius: 1rem;
+    width: 16rem;
 
     &:hover{
         &::before {
@@ -46,7 +47,7 @@ const CardContentPara = styled.p`
 `
 
 export const Card = ({ d, onCardClick }) => {
-    console.log(d);
+    
     const cardData = d;
     const { plantImage, plantName, plantPrice } = cardData;
     return (

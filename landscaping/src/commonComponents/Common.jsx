@@ -11,3 +11,11 @@ export const LSSubHeading = styled.h2`
     color: #77B254;
     font-weight: 600;
 `
+
+export const LSPara = styled.p`
+    font-size: 18px;
+    font-weight: 600;
+`
+export const LSParaHeading = styled.h2`
+    font-size: 18px;
+`

@@ -3,6 +3,7 @@ import './App.css'
 import Template from './components/layout/Template'
 import Shop from './components/Shop'
 import Home from './components/Home'
+import AddToCart from './components/AddToCart'
 
 
 function App() {
@@ -18,6 +19,10 @@ function App() {
         ,{
           path: "/shop",
           element: <Shop/>
+        }
+        ,{
+          path: "/addtocart",
+          element: <AddToCart/>
         }
       ]
     }

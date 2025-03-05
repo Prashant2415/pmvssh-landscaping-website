@@ -1,50 +1,50 @@
 export const Data =[
     {
         id: 1,
-        plantName: "Abcd",
+        plantName: "A",
         plantImage: "imageOne",
-        plantPrice: "20$"
+        plantPrice: "20"
     },
     {
         id: 2,
-        plantName: "Abcd",
+        plantName: "B",
         plantImage: "imageOne",
-        plantPrice: "20$"
+        plantPrice: "20"
     },
     {
         id: 3,
-        plantName: "Abcd",
+        plantName: "C",
         plantImage: "imageOne",
-        plantPrice: "20$"
+        plantPrice: "20"
     },
     {
         id: 4,
-        plantName: "Abcd",
+        plantName: "D",
         plantImage: "imageOne",
-        plantPrice: "20$"
+        plantPrice: "20"
     },
     {
         id: 5,
-        plantName: "Abcd",
+        plantName: "E",
         plantImage: "imageOne",
-        plantPrice: "20$"
+        plantPrice: "20"
     },
     {
         id: 6,
-        plantName: "Abcd",
+        plantName: "F",
         plantImage: "imageOne",
-        plantPrice: "20$"
+        plantPrice: "20"
     },
     {
         id: 7,
-        plantName: "Abcd",
+        plantName: "G",
         plantImage: "imageOne",
-        plantPrice: "20$"
+        plantPrice: "20"
     },
     {
         id: 8,
-        plantName: "Abcd",
+        plantName: "H",
         plantImage: "imageOne",
-        plantPrice: "20$"
+        plantPrice: "20"
     },
 ]

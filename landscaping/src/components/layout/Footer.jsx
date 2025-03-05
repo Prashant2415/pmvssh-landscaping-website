@@ -11,21 +11,7 @@ const Footer = () => {
       
       </div>
       <div className="footer-link-container">
-        {/* <ul className='footer-ul'>
-          <li className='footer-li'>
-            <LSLink to="/ourexperience" title="Our Experience" className="underline"/>
-          </li>
-          <li className='footer-li'>
-            <LSLink to="/whychooseus" title="Why choose us" className="underline"/>
-          </li>
-          <li className='footer-li'>
-            <LSLink to="/faq" title="FAQ" className="underline"/>
-          </li>
-          <li className='footer-li'>
-            <LSLink to="/contact" title="Contact" className="underline"/>
-          </li>
-        </ul> */}
-        <LSPara className='copyright'>© 2025 PM. All rights reserved.</LSPara>
+        <LSPara>© 2025 PM. All rights reserved.</LSPara>
       </div>
     </div>
   )

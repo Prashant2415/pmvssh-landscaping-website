@@ -55,7 +55,7 @@ export const Card = ({ d, onCardClick }) => {
             <CardImage src={`./src/images/${plantImage}.jpg`} alt={plantName}></CardImage>
             <CardContent>
                 <CardContentHeading>{plantName}</CardContentHeading>
-                <CardContentPara>{plantPrice}</CardContentPara>
+                <CardContentPara>${plantPrice}</CardContentPara>
                 <SecondaryButton onClick={() => { onCardClick(cardData) }}>Add to cart</SecondaryButton>
             </CardContent>
         </CardComponent>

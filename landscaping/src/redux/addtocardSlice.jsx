@@ -9,11 +9,32 @@ const addtocartSlice = createSlice(
         reducers:{
             addtocart: (state,action)=>{
                 console.log(action.payload)
-                state.data.push(action.payload);
+                state.data.push({...action.payload,quantity: 1});
+            },
+            increment: (state,action)=>{
+                const cartValue = state.data.find(item => item.id === action.payload)
+                if(cartValue)
+                {
+                    cartValue.quantity += 1;
+                }
+            },
+            decrement: (state,action)=>{
+                const cartValue = state.data.find(item => item.id === action.payload)
+                if(cartValue && cartValue.quantity > 1)
+                {
+                    cartValue.quantity -=1;
+                }
+            },
+            remove:(state,action)=>{
+                const removeValue = state.data.find((item)=> item.id === action.payload)
+                if(removeValue)
+                {
+                    state.data.pop();
+                }
             }
         }
     }
 )
 
-export const {addtocart} = addtocartSlice.actions;
+export const {addtocart, increment, decrement, remove} = addtocartSlice.actions;
 export default addtocartSlice.reducer;

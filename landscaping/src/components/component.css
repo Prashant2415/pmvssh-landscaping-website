@@ -46,9 +46,9 @@
 
 .card-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 50px;
+    padding: 1rem 2rem;
 }
 .card{
     border: 1px solid #77B254;
@@ -87,4 +87,126 @@
 }
 .p-margin{
     margin: 1rem 0rem 0rem 0rem;
+}
+
+/* Shop Component*/
+.sho-container{
+    position: relative;
+}
+.search-filter-container{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin: 0rem 0rem 0rem 2rem;
+}
+.search-container{
+    
+}
+.search-text{
+    padding: 10px;
+    width: 20rem;
+    border-radius: 2rem;
+}
+.search-button{
+    position: absolute;
+    background: transparent;
+    margin: 10px 0px 0px -36px;
+    border: none;
+    cursor: pointer;
+}
+.select{
+    width: 10rem;
+    padding: 10px;
+    border-radius: 1rem;
+    background: #77B254;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;  
+}
+
+/*Add to cart component*/
+.add-to-cart-container{
+    display: flex;
+    gap: 5rem;
+}
+.my-cart-container{
+    width: 50%;
+    padding: 1rem;
+    /* background: red; */
+    border-right: 2px solid #AEEA94;
+}
+.order-summary-container{
+    width: 50%;
+    padding: 1rem;
+    /* background: red; */
+}
+
+.my-cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #AEEA94;
+}
+.mycart-image{
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+}
+
+.quantity-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.quantity-button{
+    padding: 10px;
+    background: transparent;
+    border: 1px solid green;
+}
+.quantity-button:hover{
+    background: #77B254;
+    color: #ffffff;
+}
+.quantity-value{
+
+}
+
+.remove-button{
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 1rem;
+    background: #77B254;
+    color: #ffffff;
+}
+.remove-button:hover{
+    background: transparent;
+    border: 1px solid #77B254;
+    color: #000000;
+}
+.description{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.quantity-price{
+    width: 4rem;
+}
+.order-summary{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 0rem 2rem 0rem;
+    border-bottom: 1px solid #77B254;
+    width: 20rem;
+}
+.total-smmary{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 0rem 2rem 0rem;
+    width: 20rem;
 }

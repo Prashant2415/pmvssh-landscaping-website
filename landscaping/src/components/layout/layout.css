@@ -1,6 +1,7 @@
 /*Main container*/
 .main-container{
-    height: auto;
+    padding: 0rem 2rem;
+    min-height: 70vh;
 }
 
 /* Header */
@@ -9,6 +10,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+    padding: 0rem 2rem;
 }
 .logo{
 
@@ -62,11 +64,12 @@
 
 /* Footer */
 .footer-container{
-    padding: 0rem 0rem 1rem 0rem;
+    padding: 0rem 2rem;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
+    background: #AEEA94;
 }
 .footer-content{
     width: 28rem;

@@ -4,6 +4,7 @@ import Template from './components/layout/Template'
 import Shop from './components/Shop'
 import Home from './components/Home'
 import AddToCart from './components/AddToCart'
+import Contact from './components/Contact'
 
 
 function App() {
@@ -23,6 +24,10 @@ function App() {
         ,{
           path: "/addtocart",
           element: <AddToCart/>
+        }
+        ,{
+          path: "/contact",
+          element: <Contact/>
         }
       ]
     }

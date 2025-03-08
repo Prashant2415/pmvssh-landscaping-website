@@ -1,29 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import homePot from "../images/homePot.jpg"
 import pottwo from "../images/pottwo.jpg"
 import imageOne from "../images/imageOne.jpg"
 import "./component.css"
 import { PrimaryButton, SecondaryButton } from '../commonComponents/ButtonComponent'
-import { LSHeading } from '../commonComponents/Common'
+import { LSHeading, LSPara } from '../commonComponents/Common'
 import { Data } from './Data'
 import {Card} from '../commonComponents/Card'
 import { useDispatch, useSelector } from 'react-redux'
 import { addtocart } from '../redux/addtocardSlice'
+import {ToastContainer} from "react-toastify"
+import ToastComponent from '../commonComponents/ToastComponent'
 const Home = () => {
   const dispatch = useDispatch();
+  const [toast, setToast] = useState(false);
   const data = Data;
   const handleOnCardClick =(data)=>{
     //console.log("Added", data)
+    setToast(true);
     dispatch(addtocart(data));
   }
   const selector = useSelector((state)=> state.addtocartSlice);
   console.log("selector ",selector)
+  
+  const handleToastTimeout =(timeoutValue)=>{
+    setToast(timeoutValue)
+  }
   return (
     <div>
+      {toast && (
+        <ToastComponent toastMsg="Product is added to the cart" delay={2000} onTimeOut={handleToastTimeout}/>
+      )}
       <div className='home-container'>
         <div className='home-content'>
           <h1 className='home-content-heading'>Plant Tree Create A <span className='span-color'>Green</span> Future</h1>
-          <p className='home-content-para'>Plants are living organisms that play a vital role in the ecosystem. They produce oxygen through photosynthesis, absorb carbon dioxide, and provide food, medicine, and shelter for humans and animals. Plants are classified into different types, including trees, shrubs, herbs, and climbers. They require sunlight, water, and nutrients from the soil to grow. Besides their environmental benefits, plants also enhance well-being by reducing stress and purifying the air.</p>
+          <LSPara className='home-content-para'>Plants are living organisms that play a vital role in the ecosystem. They produce oxygen through photosynthesis, absorb carbon dioxide, and provide food, medicine, and shelter for humans and animals. Plants are classified into different types, including trees, shrubs, herbs, and climbers. They require sunlight, water, and nutrients from the soil to grow. Besides their environmental benefits, plants also enhance well-being by reducing stress and purifying the air.</LSPara>
           <PrimaryButton>Shop Now</PrimaryButton>
         </div>
         <div className='home-image-container'>

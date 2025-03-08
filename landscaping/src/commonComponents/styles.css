@@ -25,3 +25,13 @@
 .link:hover{
     color: #77B254;
 }
+
+.linktwo{
+    text-decoration: none;
+    color: #77B254;
+    font-size: 18px;
+    font-weight: 600;
+}
+.linktwo:hover{
+    color: #000000;
+}

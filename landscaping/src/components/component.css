@@ -210,3 +210,108 @@
     padding: 0rem 0rem 2rem 0rem;
     width: 20rem;
 }
+
+
+/*About us page css*/
+.aboutus-container{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 5rem;
+}
+.aboutus-title{
+    border-bottom: 4px solid #77B254;
+    width: 9rem;
+    border-radius: 0rem 0rem 0.5rem 0rem;
+}
+.aboutus-content-container{
+
+}
+.aboutus-content{
+
+}
+.aboutusdata{
+
+}
+.aboutus-para{
+
+}
+.aboutus-image-container{
+    padding: 1rem;
+    border: 1px outset #77B254;
+}
+.aboutus-image{
+
+}
+
+/*Contact us page*/
+.contact-container{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-wrap: nowrap;
+}
+.contact-content{
+    width: 50%;
+    padding: 0rem 1rem;
+}
+.contact-image-container{
+
+}
+.contact-image{
+    width: 40rem;
+    height: 40rem;
+}
+.form-input{
+    padding: 0.5rem;
+    width: 20rem;
+    margin-bottom: 1rem;
+}
+.contact-label{
+    font-size: 18px;
+    font-weight: 600;
+}
+.contact-select{
+    width: 15rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 16px;
+    font-weight: 600;
+}
+.contact-textarea{
+    margin-bottom: 1rem;
+}
+.submit-button{
+    margin-bottom: 2rem;
+}
+.team-card-image{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 8rem;
+    object-fit: cover;
+}
+.team-card{
+    width: 20rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    height: 33rem;
+}
+.team-card:hover{
+    box-shadow: 0rem 0rem 0.5rem 0rem;
+}
+.our-team-card-container{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.our-team{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

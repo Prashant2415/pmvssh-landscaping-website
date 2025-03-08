@@ -4,6 +4,7 @@ import { Data } from './Data';
 import { Card } from '../commonComponents/Card';
 import { useDispatch, useSelector } from 'react-redux';
 import { addtocart } from '../redux/addtocardSlice';
+import ToastComponent from '../commonComponents/ToastComponent';
 const Shop = () => {
   const dataValue = Data;
   const dispatch = useDispatch();
@@ -12,6 +13,7 @@ const Shop = () => {
   const [sort, setSort] = useState("asc")
   const [search, setSearch] = useState("")
   const [flag, setFlag] = useState(false)
+  const [toast, setToast] = useState(false);
   const handleSort = (event) => {
     const order = event.target.value;
     setSort(order);
@@ -29,11 +31,19 @@ const Shop = () => {
   
   const handleOnCardClick =(data)=>{
     console.log(data);
+    setToast(true)
     dispatch(addtocart(data));
   }
   console.log(selector)
+
+  const handleToastTimeout =(timeoutValue)=>{
+    setToast(timeoutValue)
+  }
   return (
     <div className='shop-container'>
+      {toast && (
+        <ToastComponent toastMsg="Product is added to the cart" delay={2000} onTimeOut={handleToastTimeout}/>
+      )}
       <div className="search-filter-container">
         <div className="search-container">
           <input className='search-text' type="text" placeholder='Search......' value={search} onChange={handleSearch}/>

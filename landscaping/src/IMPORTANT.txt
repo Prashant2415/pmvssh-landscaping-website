@@ -1,0 +1,4 @@
+Email
+Service Id = service_ne5a1u3
+Public Key = MENnP5-3DktDS6qiO
+Template Id = template_7w8rqxq

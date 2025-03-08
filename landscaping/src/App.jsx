@@ -5,6 +5,7 @@ import Shop from './components/Shop'
 import Home from './components/Home'
 import AddToCart from './components/AddToCart'
 import Contact from './components/Contact'
+import AboutUs from './components/AboutUs'
 
 
 function App() {
@@ -29,9 +30,14 @@ function App() {
           path: "/contact",
           element: <Contact/>
         }
+        ,{
+          path: "/aboutus",
+          element: <AboutUs/>
+        }
       ]
     }
   ])
+  console.log(router)
   return(
     <RouterProvider router={router}/>
   )

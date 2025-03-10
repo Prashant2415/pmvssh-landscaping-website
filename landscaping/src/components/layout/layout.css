@@ -1,7 +1,7 @@
 /*Main container*/
 .main-container{
     padding: 0rem 2rem;
-    min-height: 70vh;
+    min-height: 65.4dvh;
     margin-bottom: 2rem;
 }
 
@@ -13,7 +13,6 @@
     align-items: center;
     padding: 0rem 2rem;
     border-bottom: 1px solid;
-    margin-bottom: 2rem;
 }
 .logo{
 

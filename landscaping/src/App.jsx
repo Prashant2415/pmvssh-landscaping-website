@@ -6,6 +6,8 @@ import Home from './components/Home'
 import AddToCart from './components/AddToCart'
 import Contact from './components/Contact'
 import AboutUs from './components/AboutUs'
+import Signup from './components/Signup'
+import Login from './components/Login'
 
 
 function App() {
@@ -33,6 +35,14 @@ function App() {
         ,{
           path: "/aboutus",
           element: <AboutUs/>
+        },
+        {
+          path: "/signup",
+          element: <Signup/>
+        },
+        {
+          path: "/login",
+          element: <Login/>
         }
       ]
     }

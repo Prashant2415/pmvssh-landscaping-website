@@ -16,7 +16,9 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(userInput)
-    emailjs
+    if(userInput.email.includes("@"))
+    {
+      emailjs
       .sendForm(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, formRef.current, {
         publicKey: EMAIL_PUBLIC_KEY,
       })
@@ -30,6 +32,10 @@ const Contact = () => {
       );
     alert("Thank you");
     setUserInput({ fullname: "", city: "", email: "", phone: "", option: "Choose any option" , message:""})
+    }
+    else{
+      alert("Please enter the correct inputs")
+    }
   }
 
   return (

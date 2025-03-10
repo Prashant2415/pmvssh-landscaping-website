@@ -5,6 +5,7 @@ import { Card } from '../commonComponents/Card';
 import { useDispatch, useSelector } from 'react-redux';
 import { addtocart } from '../redux/addtocardSlice';
 import ToastComponent from '../commonComponents/ToastComponent';
+import { LSHeading } from '../commonComponents/Common';
 const Shop = () => {
   const dataValue = Data;
   const dispatch = useDispatch();
@@ -44,6 +45,9 @@ const Shop = () => {
       {toast && (
         <ToastComponent toastMsg="Product is added to the cart" delay={2000} onTimeOut={handleToastTimeout}/>
       )}
+      <div className="heading">
+      <LSHeading>Shop</LSHeading>
+      </div>
       <div className="search-filter-container">
         <div className="search-container">
           <input className='search-text' type="text" placeholder='Search......' value={search} onChange={handleSearch}/>

@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { LSCardHeading, LSHeading, LSPara } from '../commonComponents/Common'
 import { useDispatch, useSelector } from 'react-redux'
 import "./component.css"
 import { decrement, increment, remove } from '../redux/addtocardSlice'
 import { PrimaryButton } from '../commonComponents/ButtonComponent'
+import ToastComponent from '../commonComponents/ToastComponent'
 const AddToCart = () => {
   const dispatch = useDispatch();
   const selector = useSelector(state => state.addtocartSlice.data);
+  const [toast, setToast] = useState(false);
   console.log(selector);
   const data = [
     {
@@ -24,42 +26,19 @@ const AddToCart = () => {
   ]
   let totalValue = selector?.reduce((total, item) => total + item.plantPrice * item.quantity, 0);
   console.log(totalValue)
+
+  const handleRemove =(data)=>{
+    setToast(true)
+    dispatch(remove(data.id))
+  }
+  const handleToastTimeout =(timeoutValue)=>{
+    setToast(timeoutValue)
+  }
   return (
-    // <div className='add-to-cart-container'>
-    //   <div className="my-cart-container">
-    //   <LSHeading className='title'>My Cart</LSHeading>
-    //   {selector.map((d)=>(
-    //     <div className="my-cart">
-    //         <img className='mycart-image' src={`./src/images/${d.plantImage}.jpg`} alt={d.plantName} />
-    //         <LSPara className='mycart-para'>{d.plantName}</LSPara>
-    //         <div className="quantity-container">
-    //           <button className='quantity-button' onClick={()=> dispatch(decrement(d.id))}>-</button>
-    //           <span className='quantity-value'>{d.quantity}</span>
-    //           <button className='quantity-button' onClick={() => dispatch(increment(d.id))}>+</button>
-    //         </div>
-    //         <LSPara className='quantity-price'>${d.plantPrice * d.quantity}</LSPara>
-    //         <button className='remove-button' onClick={()=> dispatch(remove(d.id))}>Remove</button>
-    //     </div>
-    //   ))}
-    //   {selector.length === 0 && (
-    //     <div className="description">
-    //       <LSPara>No items added</LSPara>
-    //     </div>
-    //   )}
-    //   </div>
-    //   <div className="order-summary-container">
-    //   <LSHeading>Order Summary</LSHeading>
-    //   <div className="order-summary">
-    //     <LSPara>Subtotal</LSPara>
-    //     <LSPara>{selector.length === 0 ? 0 : totalValue}</LSPara>
-    //   </div>
-    //   <div className="total-smmary">
-    //   <LSPara>Total</LSPara>
-    //   <LSPara>{selector.length === 0 ? 0 : totalValue}</LSPara>
-    //   </div>
-    //   </div>
-    // </div>
     <div className="add-to-cart-container">
+      {toast && (
+        <ToastComponent toastMsg="Item is removed from the cart" delay={2000} onTimeOut={handleToastTimeout} type={false}/>
+      )}
       <LSHeading>Shopping Cart</LSHeading>
       <div className="cart-container">
         <div className="shopping-cart-container">
@@ -73,7 +52,7 @@ const AddToCart = () => {
                 <button className='quantity-button' onClick={() => dispatch(increment(d.id))}>+</button>
               </div>
               <LSPara className='quantity-price'>${d.plantPrice * d.quantity}</LSPara>
-              <PrimaryButton onClick={() => dispatch(remove(d.id))}>Remove</PrimaryButton>
+              <PrimaryButton onClick={() => handleRemove(d)}>Remove</PrimaryButton>
             </div>
           ))}
           {selector.length === 0 && (

@@ -43,7 +43,7 @@ const Shop = () => {
   return (
     <div className='shop-container'>
       {toast && (
-        <ToastComponent toastMsg="Product is added to the cart" delay={2000} onTimeOut={handleToastTimeout}/>
+        <ToastComponent  toastMsg="Product is added to the cart" delay={2000} onTimeOut={handleToastTimeout} type={true}/>
       )}
       <div className="heading">
       <LSHeading>Shop</LSHeading>

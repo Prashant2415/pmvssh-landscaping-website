@@ -14,15 +14,21 @@ const ToastSuccessMsg = styled.p`
     color: #ffffff;
     padding: 0.5rem 1rem;
 `
-const ToastComponent = ({toastMsg, className , delay, onTimeOut}) => {
+const ToastRemoveMsg = styled.p`
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    background: #C62300;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+`
+const ToastComponent = ({toastMsg, className , delay, onTimeOut, type}) => {
     setTimeout(()=>{onTimeOut(false)},delay)
     window.scrollTo({top:0, behavior: "smooth"})
+    console.log(type)
   return (
-    // <div className={`toast-container ${className}`}>
-    //   <p>{toastMsg}</p>
-    // </div>
     <ToastDiv id='toastmsg' className={className}>
-        <ToastSuccessMsg>{toastMsg}</ToastSuccessMsg>
+        {type ? <ToastSuccessMsg>{toastMsg}</ToastSuccessMsg> : <ToastRemoveMsg>{toastMsg}</ToastRemoveMsg>}
     </ToastDiv>
   )
 }

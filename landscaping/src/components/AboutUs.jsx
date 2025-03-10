@@ -3,6 +3,7 @@ import "./component.css"
 import { LSCardHeading, LSHeading, LSPara, LSSubHeading } from '../commonComponents/Common'
 import { LSLink } from '../commonComponents/LSLinks'
 import { Link } from 'react-router-dom'
+import { CardHeading, CardParaHighlightText, CardSubHeading } from '../commonComponents/LSCommon'
 const AboutUs = () => {
     const aboutUsData = [
         {
@@ -69,17 +70,14 @@ const AboutUs = () => {
     <div className="our-team">
         <LSHeading>Meet Our Team</LSHeading>
         <div className="our-team-card-container">
-           
-                {personDetails.map((pd,index)=>(
-                    <div className="team-card" key={index}>
-                        <img className='team-card-image' src={pd.img} alt={pd.name} />
-                        <LSCardHeading>{pd.name}</LSCardHeading>
-                        <LSSubHeading>{pd.title}</LSSubHeading>
-                        <LSPara>{pd.description}</LSPara>
-                    </div>
-                ))}
-            </div>
-
+            {personDetails.map((pd,index)=>(
+                <div className="team-card">
+                    <img className='team-card-image' src={pd.img} alt={pd.name}/>
+                    <CardSubHeading>{pd.name}</CardSubHeading>
+                    <CardParaHighlightText className='p-tag'>{pd.title}</CardParaHighlightText>
+                </div>
+            ))}
+        </div>
     </div>
     </div>
   )

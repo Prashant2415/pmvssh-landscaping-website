@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <div>
       {toast && (
-        <ToastComponent toastMsg="Product is added to the cart" delay={2000} onTimeOut={handleToastTimeout}/>
+        <ToastComponent toastMsg="Product is added to the cart" delay={2000} onTimeOut={handleToastTimeout} type={true}/>
       )}
       <div className='home-container'>
         <div className='home-content'>

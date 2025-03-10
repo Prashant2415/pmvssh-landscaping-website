@@ -283,6 +283,37 @@
 
 }
 
+.our-team{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.our-team-card-container{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+}
+.team-card{
+    padding: 1rem;
+    border: 1px solid lightgray;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15rem;
+}
+.team-card:hover{
+    box-shadow: 0rem 0rem 0.5rem 0rem #77B254;
+}
+.team-card-image{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 5rem;
+    object-fit: cover;
+    border: 3px solid #77B254;
+}
+
 /*Contact us page*/
 .contact-container{
     display: flex;
@@ -323,37 +354,7 @@
 .submit-button{
     margin-bottom: 2rem;
 }
-.team-card-image{
-    width: 10rem;
-    height: 10rem;
-    border-radius: 8rem;
-    object-fit: cover;
-}
-.team-card{
-    width: 20rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid;
-    height: 33rem;
-}
-.team-card:hover{
-    box-shadow: 0rem 0rem 0.5rem 0rem;
-}
-.our-team-card-container{
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-.our-team{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 .p-tag{
     margin-top: 0;
 }

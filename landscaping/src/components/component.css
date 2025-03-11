@@ -277,7 +277,9 @@
 }
 .aboutus-image-container{
     padding: 1rem;
-    border: 1px outset #77B254;
+    border: 1px solid;
+    box-shadow: 0rem 0rem 0.5rem 0rem;
+    background: #77B254;
 }
 .aboutus-image{
 
@@ -357,4 +359,39 @@
 
 .p-tag{
     margin-top: 0;
+}
+
+
+/*Service page container*/
+.service-page-container{
+
+}
+.service-container{
+    margin-top: 3rem;
+}
+.service-content-container{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    margin-bottom: 2rem;
+}
+.content-list{
+
+}
+.service-image-container{
+    padding: 1rem;
+    border: 1px solid;
+    box-shadow: 0rem 0rem 0.5rem 0rem;
+    background: #77B254;
+}
+.service-image{
+    width: 40rem;
+    height: 20rem;
+    object-fit: cover;
+}
+.row{
+    flex-direction: row;
+}
+.row-reverse{
+    flex-direction: row-reverse;
 }

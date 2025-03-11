@@ -17,6 +17,7 @@ const Header = () => {
             <li className='li-links'><LSLink title="Home" to="/"/></li>
             <li className='li-links'><LSLink title="Shop" to="/shop"/></li>
             <li className='li-links'><LSLink title="About" to="/aboutus"/></li>
+            <li className='li-links'><LSLink title="Services" to="/services"/></li>
             <li className='li-links'><LSLink title="Contact" to="/contact"/></li>
         </ul>
       </nav>

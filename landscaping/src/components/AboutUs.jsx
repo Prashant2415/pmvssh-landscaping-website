@@ -1,6 +1,6 @@
 import React from 'react'
 import "./component.css"
-import { LSCardHeading, LSHeading, LSPara, LSSubHeading } from '../commonComponents/Common'
+import { LSCardHeading, LSHeading, LSPara} from '../commonComponents/Common'
 import { LSLink } from '../commonComponents/LSLinks'
 import { Link } from 'react-router-dom'
 import { CardHeading, CardParaHighlightText, CardSubHeading } from '../commonComponents/LSCommon'

@@ -8,6 +8,7 @@ import Contact from './components/Contact'
 import AboutUs from './components/AboutUs'
 import Signup from './components/Signup'
 import Login from './components/Login'
+import Service from './components/Service'
 
 
 function App() {
@@ -43,6 +44,10 @@ function App() {
         {
           path: "/login",
           element: <Login/>
+        },
+        {
+          path: "/services",
+          element: <Service/>
         }
       ]
     }

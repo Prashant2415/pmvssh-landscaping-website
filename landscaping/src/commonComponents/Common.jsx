@@ -18,8 +18,8 @@ export const LSSubHeading = styled.h2`
 `
 
 export const LSPara = styled.p`
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 500;
 `
 export const LSParaHeading = styled.h2`
     font-size: 18px;

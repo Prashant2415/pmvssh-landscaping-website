@@ -351,7 +351,7 @@
     font-weight: 600;
 }
 .contact-textarea{
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 }
 .submit-button{
     margin-bottom: 2rem;

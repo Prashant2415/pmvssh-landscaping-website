@@ -14,7 +14,10 @@ const Contact = () => {
     setUserInput({ ...userInput, [name]: value })
   }
   console.log("data", LSCommonElement.EMAIL_SERVICE_ID)
-  const { EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, EMAIL_PUBLIC_KEY } = LSCommonElement;
+  const EMAIL_SERVICE_ID = import.meta.env.VITE_EMAIL_SERVICE_ID
+  const EMAIL_TEMPLATE_ID = import.meta.env.VITE_EMAIL_TEMPLATE_ID
+  const EMAIL_PUBLIC_KEY = import.meta.env.VITE_EMAIL_PUBLIC_KEY 
+  // const { EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, EMAIL_PUBLIC_KEY } = LSCommonElement;
 
   const handleSubmit = (event) => {
     console.log("value")

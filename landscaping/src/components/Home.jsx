@@ -32,6 +32,7 @@ const Home = () => {
     e.preventDefault();
     navigate("/shop")
   }
+  console.log(import.meta.env.VITE_NAME)
   return (
     <div>
       {toast && (

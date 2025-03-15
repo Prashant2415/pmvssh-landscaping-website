@@ -11,10 +11,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addtocart } from '../redux/addtocardSlice'
 import {ToastContainer} from "react-toastify"
 import ToastComponent from '../commonComponents/ToastComponent'
+import {useNavigate} from "react-router-dom"
 const Home = () => {
   const dispatch = useDispatch();
   const [toast, setToast] = useState(false);
   const data = Data;
+  const navigate = useNavigate();
   const handleOnCardClick =(data)=>{
     //console.log("Added", data)
     setToast(true);
@@ -26,6 +28,10 @@ const Home = () => {
   const handleToastTimeout =(timeoutValue)=>{
     setToast(timeoutValue)
   }
+  const handleShopNow=(e)=>{
+    e.preventDefault();
+    navigate("/shop")
+  }
   return (
     <div>
       {toast && (
@@ -35,7 +41,7 @@ const Home = () => {
         <div className='home-content'>
           <h1 className='home-content-heading'>Plant Tree Create A <span className='span-color'>Green</span> Future</h1>
           <LSPara className='home-content-para'>Plants are living organisms that play a vital role in the ecosystem. They produce oxygen through photosynthesis, absorb carbon dioxide, and provide food, medicine, and shelter for humans and animals. Plants are classified into different types, including trees, shrubs, herbs, and climbers. They require sunlight, water, and nutrients from the soil to grow. Besides their environmental benefits, plants also enhance well-being by reducing stress and purifying the air.</LSPara>
-          <PrimaryButton>Shop Now</PrimaryButton>
+          <PrimaryButton onClick={handleShopNow}>Shop Now</PrimaryButton>
         </div>
         <div className='home-image-container'>
           <img className='home-image' src={pottwo} alt="home pot" />

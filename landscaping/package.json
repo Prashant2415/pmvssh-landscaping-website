@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@auth0/auth0-react": "^2.3.0",
     "@emailjs/browser": "^4.4.1",
     "@reduxjs/toolkit": "^2.6.0",
     "axios": "^1.7.9",
     "dotenv": "^16.4.7",
+    "firebase": "^11.4.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-redux": "^9.2.0",

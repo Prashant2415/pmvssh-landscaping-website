@@ -9,6 +9,12 @@ const Header = () => {
     navigate("/addtocart")
   }
 
+  const handleLogout =(e)=>{
+    e.preventDefault();
+    localStorage.clear();
+    window.location.reload();
+    window.history.state("/")
+  }
   return (
     <div className='header-container'>
       <h1 className='logo'><span className='logo-t'>T</span>PLANT</h1>
@@ -25,8 +31,9 @@ const Header = () => {
       <svg onClick={handleRedirect} xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="bi bi-bag cart" viewBox="0 0 16 16">
         <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
       </svg>
-      <SecondaryButton onClick={()=> {navigate("/signup")}}>Sign Up</SecondaryButton>
-      <PrimaryButton onClick={()=>{navigate("/login")}}>Login</PrimaryButton>
+      {localStorage.getItem("isLoggedIn") === "true" ? <SecondaryButton onClick={handleLogout}>Logout</SecondaryButton> : <PrimaryButton onClick={()=>{navigate("/signup")}}>Sign Up</PrimaryButton>}
+      
+      
       </div>
     </div>
   )

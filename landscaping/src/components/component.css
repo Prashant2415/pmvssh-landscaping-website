@@ -360,7 +360,9 @@
 .p-tag{
     margin-top: 0;
 }
-
+.margin-bottom{
+    margin-bottom: 0;
+}
 
 /*Service page container*/
 .service-page-container{
@@ -394,4 +396,61 @@
 }
 .row-reverse{
     flex-direction: row-reverse;
+}
+
+/*Sign up page*/
+.signup-container{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+.signup-image-container{
+
+}
+.signup-image{
+    width: 40rem;
+    height: 28rem;
+    object-fit: cover;
+}
+.signup-form-content{
+    width: 30rem;
+    padding: 2rem;
+    border-left: 2px solid;
+}
+.form-label{
+
+}
+.form-input{
+
+}
+.error-message{
+    color: rgb(201, 29, 29);
+}
+.side-text{
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+/*Login page*/
+.login-container{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+.login-image-container{
+
+}
+.login-image{
+    width: 40rem;
+    height: 28rem;
+    object-fit: contain;
+}
+.login-content-container{
+    width: 30rem;
+    padding: 2rem;
+    border-left: 2px solid;
 }
